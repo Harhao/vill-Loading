@@ -6,9 +6,9 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    // filename: 'vue-loading.js',
-    // library:'VueLoading',
+    publicPath: '/dists/',
+    filename: 'build.js',
+    // library:'vueLoading',
     // libraryTarget:'umd',
     // umdNamedDefine:true
   },

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <vueLoading/>
+    <Loading/>
   </div>
 </template>
 
@@ -15,4 +15,8 @@ export default {
 </script>
 
 <style lang="scss">
+#app{
+  width: 100px;
+  height: 1000px;
+}
 </style>

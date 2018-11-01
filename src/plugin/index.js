@@ -7,5 +7,5 @@ const install = function(Vue,options = {}){
     Vue.component(Loading.name,Loading);
     install.installed = true;
 };
-const vueLoading = {install};
+const vueLoading = {install,Loading};
 export default vueLoading;
