@@ -16,12 +16,12 @@
   width: 80px;
   height: 80px;
   animation: rotate 2s linear infinite;
-}
-.loading {
-  stroke: rgb(53, 157, 218);
-  stroke-width: 3;
-  fill: none;
-  animation: dash 1.5s linear infinite;
+  & .loading {
+    stroke: rgb(53, 157, 218);
+    stroke-width: 3;
+    fill: none;
+    animation: dash 1.5s linear infinite;
+  }
 }
 @keyframes dash {
   0% {
