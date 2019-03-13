@@ -1,15 +1,20 @@
 {
   "name": "vill-loading",
-  "description": "a loading base on svg",
-  "version": "1.0.0",
-  "author": "huahaoworkspace@163.com <huahaoworkspace@163.com>",
+  "description": "a loading plugin base on vuejs",
+  "version": "1.0.2",
+  "author": "laternkiwis@aliyun.com",
   "license": "MIT",
   "private": false,
   "main":"dist/vue-loading.js",
-  "files":["dist"],
+  "keywords": [
+    "vue",
+    "loading",
+    "vue-loading",
+    "vill-loading"
+  ],
   "repository": {
     "type":"git",
-    "url":"https://github.com/Harhao/vue-Loading"
+    "url":"https://github.com/Harhao/vill-Loading"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
