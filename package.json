@@ -1,11 +1,11 @@
 {
   "name": "vill-loading",
   "description": "a loading plugin base on vuejs",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "author": "laternkiwis@aliyun.com",
   "license": "MIT",
   "private": false,
-  "main":"dist/vue-loading.js",
+  "main":"./src/plugin/index.js",
   "keywords": [
     "vue",
     "loading",

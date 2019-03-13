@@ -1,11 +1,6 @@
-import Loading from './loading.vue';
-if(typeof window !== 'undefined' && window.Vue){
-    install(window.Vue)
-}
-const install = function(Vue,options = {}){
-    if (install.installed) return;
-    Vue.component(Loading.name,Loading);
-    install.installed = true;
+import Loading from "./loading.vue";
+export default {
+  install(Vue, options = {}) {
+    Vue.component(Loading.name, Loading);
+  }
 };
-const vueLoading = {install,Loading};
-export default vueLoading;

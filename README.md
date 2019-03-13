@@ -1,16 +1,29 @@
 # vill-loading
 
-> a loading base on svg
+> a vue plugins about notice or toast
 
 ## Build Setup
 
-``` bash
-# install dependencies
-npm install
+### install the plugin on bash and the sass module support
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
 ```
+npm install vill-loading --save-dev
+npm install sass-loader node-sass vue-style-loader --save-dev
+```
+
+### register the plugins on the vue project in the entry file (main.js)
+
+```
+import loading from 'vill-loading'
+Vue.use(loading);
+```
+
+### on the vue template file ,you can use it by the follow structor and the table parent element should be seting the style to relative
+
+```
+<table style="position:relative">
+    <loading :closed="true"/>
+</table>
+```
+## License
+[MIT](http://opensource.org/licenses/MIT)
