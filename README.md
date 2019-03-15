@@ -25,5 +25,8 @@ Vue.use(loading);
     <loading :closed="true"/>
 </table>
 ```
+| 字段 | 说明 | 类型 | 默认值
+|----- | ----- | ----- | ----- 
+| closed | 必选值 true/false| Boolean | -
 ## License
 [MIT](http://opensource.org/licenses/MIT)
