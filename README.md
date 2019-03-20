@@ -23,7 +23,7 @@ Vue.use(loading);
 ```
 <template>
   <div id="app">
-     <div v-loading.fullscreen.lock="{text:'加载中...',loading:true}" class="bindCls">全屏覆盖</div>
+     <div v-loading="{text:'加载中...',loading:true}" class="bindCls">demo</div>
   </div>
 </template>
 
@@ -39,10 +39,15 @@ export default {
 
 <style lang="scss">
 #app{
-  width: 100px;
-  height: 1000px;
+  width: 100vw;
+  height: 100vh;
+  .bindCls{
+    width: 500px;
+    height: 500px;
+  }
 }
 </style>
+
 ```
 
 | 字段      | 说明              | 类型    | 默认值 |

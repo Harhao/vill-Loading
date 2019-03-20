@@ -6,21 +6,25 @@
 
 <script>
 export default {
-  name: 'app',
-  data () {
-    return {
-    }
+  name: "app",
+  data() {
+    return {};
   }
-}
+};
 </script>
 
 <style lang="scss">
-#app{
+#app {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
-  .bindCls{
-    width: 500px;
-    height: 500px;
-  }
+}
+.bindCls {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #ddd;
 }
 </style>
