@@ -21,12 +21,11 @@ Vue.use(loading);
 ### on the vue template file ,you can use it by the follow structor and the table parent element should be seting the style to relative
 
 ```
-<table style="position:relative">
-    <loading :closed="true"/>
-</table>
+<div class="section" v-loading="true"></div>
+<div class="section" v-loading.fullscreen="true"></div>
 ```
 | 字段 | 说明 | 类型 | 默认值
 |----- | ----- | ----- | ----- 
-| closed | 必选值 true/false| Boolean | -
+| v-loading | 必选值 true/false| Boolean | -
 ## License
 [MIT](http://opensource.org/licenses/MIT)
