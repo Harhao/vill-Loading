@@ -14,7 +14,7 @@ export default {
   data() {
     return {
       prefixCls: prefixCls,
-      tips:''
+      tips: ""
     };
   },
   props: {
