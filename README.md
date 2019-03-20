@@ -49,7 +49,8 @@ export default {
 </style>
 
 ```
-
+### demo
+![demo](https://github.com/Harhao/vill-loading/blob/master/src/assets/demo.gif)
 | 字段      | 说明              | 类型    | 默认值 |
 | --------- | ----------------- | ------- | ------ |
 | fullscreen | 修饰符(loading铺满body)| - | -      |
