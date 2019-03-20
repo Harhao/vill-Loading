@@ -14,10 +14,11 @@ loadingDirective.install = Vue => {
     }
   };
   const insertdom = (parent, el, binding) => {
-    if (binding.modifiers.lock) {
+    if (binding.modifiers.lock && binding.modifiers.fullscreen) {
       parent.style.overflow = "hidden";
     }
     el.dom.closed = true;
+    parent.style.position = "relative";
     parent.appendChild(el.mask);
   };
   Vue.directive("loading", {
