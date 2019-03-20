@@ -14,8 +14,8 @@ loadingDirective.install = Vue => {
     }
   };
   const insertdom = (parent, el, binding) => {
-    if(binding.modifiers.lock){
-      parent.style.overflow = 'hidden';
+    if (binding.modifiers.lock) {
+      parent.style.overflow = "hidden";
     }
     el.dom.closed = true;
     parent.appendChild(el.mask);
@@ -24,12 +24,14 @@ loadingDirective.install = Vue => {
     bind: function(el, binding, vnode) {
       const mask = new Mask({
         el: document.createElement("div"),
+        // data会与loading.vue里面data数据进行合并
         data: {
           fullscreen: !!binding.modifiers.fullscreen,
           tips: binding.value.text
         }
       });
       el.dom = mask;
+      // 如果上面的mask实例中没有提供已经存在el字段，则需要手动进行挂载dom元素，使用这句代码 el.mask = mask.$mount().$el;
       el.mask = mask.$el;
       binding.value && toggleLoading(el, binding);
     },
