@@ -7,8 +7,9 @@ loadingDirective.install = Vue => {
     if (binding.value.loading) {
       if (binding.modifiers.fullscreen) {
         insertdom(document.body, el, binding);
+      } else {
+        insertdom(el, el, binding);
       }
-      insertdom(el, el, binding);
     } else {
       el.dom.closed = false;
     }
@@ -17,8 +18,8 @@ loadingDirective.install = Vue => {
     if (binding.modifiers.lock && binding.modifiers.fullscreen) {
       parent.style.overflow = "hidden";
     }
-    el.dom.closed = true;
     parent.style.position = "relative";
+    el.dom.closed = true;
     parent.appendChild(el.mask);
   };
   Vue.directive("loading", {
