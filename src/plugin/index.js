@@ -4,7 +4,7 @@ const Mask = Vue.extend(Loading);
 const loadingDirective = {};
 loadingDirective.install = Vue => {
   const toggleLoading = (el, binding) => {
-    if (binding.value) {
+    if (binding.value.loading) {
       if (binding.modifiers.fullscreen) {
         insertdom(document.body, el, binding);
       }
@@ -14,6 +14,9 @@ loadingDirective.install = Vue => {
     }
   };
   const insertdom = (parent, el, binding) => {
+    if(binding.modifiers.lock){
+      parent.style.overflow = 'hidden';
+    }
     el.dom.closed = true;
     parent.appendChild(el.mask);
   };
@@ -22,7 +25,8 @@ loadingDirective.install = Vue => {
       const mask = new Mask({
         el: document.createElement("div"),
         data: {
-          fullscreen: !!binding.modifiers.fullscreen
+          fullscreen: !!binding.modifiers.fullscreen,
+          tips: binding.value.text
         }
       });
       el.dom = mask;
@@ -35,7 +39,7 @@ loadingDirective.install = Vue => {
       }
     },
     unbind: function(el, binding) {
-      el.dom && el.dom.$detroy();
+      el.dom && el.dom.$destroy();
     }
   });
 };

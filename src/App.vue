@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-     <div v-loading="true" class="bindCls">全屏覆盖</div>
+     <div v-loading.fullscreen.lock="{text:'加载中...',loading:true}" class="bindCls">全屏覆盖</div>
   </div>
 </template>
 
@@ -18,10 +18,5 @@ export default {
 #app{
   width: 100px;
   height: 1000px;
-}
-.bindCls{
-  width: 700px;
-  height: 900px;
-  position: relative;
 }
 </style>

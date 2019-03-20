@@ -18,14 +18,40 @@ import loading from 'vill-loading'
 Vue.use(loading);
 ```
 
-### on the vue template file ,you can use it by the follow structor and the table parent element should be seting the style to relative
+### on the vue template file ,you can use it by the follow example
 
 ```
-<div class="section" v-loading="true"></div>
-<div class="section" v-loading.fullscreen="true"></div>
+<template>
+  <div id="app">
+     <div v-loading.fullscreen.lock="{text:'加载中...',loading:true}" class="bindCls">全屏覆盖</div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'app',
+  data () {
+    return {
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+#app{
+  width: 100px;
+  height: 1000px;
+}
+</style>
 ```
-| 字段 | 说明 | 类型 | 默认值
-|----- | ----- | ----- | ----- 
-| v-loading | 必选值 true/false| Boolean | -
+
+| 字段      | 说明              | 类型    | 默认值 |
+| --------- | ----------------- | ------- | ------ |
+| fullscreen | 修饰符(loading铺满body)| - | -      |
+| lock | 修饰符(body不可滚动)| - | -      |
+| text | loading的提示文字| string | -      |
+| loading | 控制loading的显隐| boolean | -      |
+
 ## License
+
 [MIT](http://opensource.org/licenses/MIT)
