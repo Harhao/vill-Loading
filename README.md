@@ -57,6 +57,9 @@ export default {
 | text | loading的提示文字| string | -      |
 | loading | 控制loading的显隐| boolean | -      |
 
+### demo
+![demo](https://github.com/Harhao/vill-Loading/blob/master/src/assets/demo.gif)
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
