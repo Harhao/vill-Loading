@@ -52,8 +52,8 @@ export default {
 
 | 字段      | 说明              | 类型    | 默认值 |
 | --------- | ----------------- | ------- | ------ |
-| fullscreen | 修饰符(loading铺满body)| - | -      |
-| lock | 修饰符(body不可滚动)| - | -      |
+| fullscreen | 修饰符全屏loading| - | -      |
+| lock | 修饰符全屏loading不可滚动)| - | -      |
 | text | loading的提示文字| string | -      |
 | loading | 控制loading的显隐| boolean | -      |
 
