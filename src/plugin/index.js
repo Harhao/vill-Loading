@@ -1,8 +1,8 @@
-import Vue from "vue";
+
 import Loading from "./loading.vue";
-const Mask = Vue.extend(Loading);
 const loadingDirective = {};
 loadingDirective.install = Vue => {
+  const Mask = Vue.extend(Loading);
   const toggleLoading = (el, binding) => {
     if (binding.value.loading) {
       if (binding.modifiers.fullscreen) {
