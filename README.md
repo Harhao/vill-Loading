@@ -1,6 +1,7 @@
 # vill-loading
 
-> a vue plugins about notice or toast
+> a vue plugins about notice or toast modal
+
 
 ## Build Setup
 
